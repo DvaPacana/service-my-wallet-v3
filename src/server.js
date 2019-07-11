@@ -64,6 +64,9 @@ merchantAPI.all(
   callApi('upgradeWallet')
 )
 
+legacyAPI.all('/',function(req,res){
+  console.log('test');
+});
 // Routing: Legacy Wallet API
 legacyAPI.all(
   '/balance',

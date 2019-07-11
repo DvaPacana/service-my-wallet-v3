@@ -74,6 +74,8 @@ MerchantAPI.prototype.sendMany = function (guid, options) {
 }
 
 MerchantAPI.prototype.makePayment = function (guid, options) {
+  console.log('make payment');
+  console.log(options);
   return this.getWallet(guid, options)
     .then(requireSecondPassword(options))
     .then(function (wallet) {
